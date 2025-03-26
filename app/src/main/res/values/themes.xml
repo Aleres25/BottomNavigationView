@@ -3,7 +3,40 @@
     <style name="Base.Theme.BottomNavigationView" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="bottomNavigationStyle">@style/MyBottomNavigationView</item>
     </style>
 
     <style name="Theme.BottomNavigationView" parent="Base.Theme.BottomNavigationView" />
+
+    <!--Custom BottomNavigationBar -->
+    <style name="MyBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!--Arkaplan Rengi -->
+        <item name="backgroundTint">#5376CC</item>
+        <!--Basıldığında Arkada Oluşan Renk -->
+        <item name="itemRippleColor">#0023FF</item>
+        <!--Labelların Görünürlüğü Örneğin Aşağıdaki Sadece Seçilen Menu Itemının Text'ini Gösteriyor-->
+        <item name="labelVisibilityMode">selected</item>
+        <!--İcon Büyüklüğü -->
+        <item name="itemIconSize">24dp</item>
+        <!--İcon Rengi -->
+        <item name="itemIconTint">#A3FF00</item>
+        <!--Text Rengi -->
+        <item name="itemTextColor">@color/white</item>
+        <!--Text Özelliği(Aktifken) -->
+        <item name="itemTextAppearanceActive">@style/TextAppearance.MaterialComponents.Button</item>
+        <!--Text Özelliği(İnaktifken) -->
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.MaterialComponents.Button
+        </item>
+        <!--Görünümü-->
+        <item name="shapeAppearanceOverlay">@style/bottomNavigationStyle</item>
+
+    </style>
+
+    <style name="bottomNavigationStyle" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamily">cut</item>
+
+    </style>
 </resources>
